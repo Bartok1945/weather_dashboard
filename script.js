@@ -144,7 +144,7 @@ async function displayWeather() {
         $("#weatherContainer").html(currentWeatherDiv);
 }
 
-// This function runs the AJAX call for the 5 day forecast and displays them to the DOM
+// AJAX request
 async function displayFiveDayForecast() {
 
     var queryURL = "https://api.openweathermap.org/data/2.5/forecast?q="+cityname+"&units=imperial&appid=241304487232d165fa5b2c7038a1b729";
@@ -184,7 +184,7 @@ async function displayFiveDayForecast() {
       $("#forecastContainer").html(forecastDiv);
     }
 
-// This function is used to pass the city in the history list to the displayWeather function
+// passing the city in the history list to the displayWeather function
 function historyDisplayWeather(){
     cityname = $(this).attr("data-name");
     displayWeather();
